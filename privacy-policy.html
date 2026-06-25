@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — AI Antique Identifier</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:   #2C1B18;
+            --blue:   #5C3D35;
+            --accent: #8C6239;
+            --sky:    #B29274;
+            --teal:   #D9C5B2;
+            --green:  #4E6E58;
+            --red:    #A94442;
+            --amber:  #D9822B;
+            --ink:    #2A2421;
+            --body:   #4A3F3B;
+            --muted:  #7A6F6A;
+            --border: #DCD5D1;
+            --surface:#F8F5F2;
+            --white:  #FFFFFF;
+            --card-shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(140,98,57,.08);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            color: var(--body);
+            background: #F4EFEA;
+            min-height: 100vh;
+        }
+        /* ── Header ─────────────────────────────────── */
+        .site-header {
+            background: linear-gradient(135deg, #1C100E 0%, #4A3029 55%, #704E44 100%);
+            color: #fff;
+            padding: 56px 24px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .site-header::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 70% 30%, rgba(140,98,57,.25) 0%, transparent 60%),
+                        radial-gradient(ellipse at 20% 80%, rgba(217,197,178,.18) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .header-icon {
+            font-size: 52px;
+            display: block;
+            margin-bottom: 16px;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,.25));
+        }
+        .site-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 400;
+            letter-spacing: -.5px;
+            margin-bottom: 6px;
+        }
+        .site-header .doc-type {
+            font-size: .9rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: .75;
+            margin-bottom: 20px;
+        }
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+        .badge {
+            background: rgba(255,255,255,.15);
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: .78rem;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+        }
+        /* ── Layout ─────────────────────────────────── */
+        .page-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+        /* ── Nav strip ──────────────────────────────── */
+        .toc-strip {
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: var(--card-shadow);
+            padding: 20px 24px;
+            margin: -28px 0 32px;
+            position: relative;
+            z-index: 2;
+        }
+        .toc-strip p {
+            font-size: .78rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        .toc-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .toc-links a {
+            font-size: .82rem;
+            color: var(--accent);
+            text-decoration: none;
+            background: var(--surface);
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-weight: 500;
+            transition: background .15s, color .15s;
+        }
+        .toc-links a:hover { background: var(--accent); color: #fff; }
+        /* ── Section Cards ──────────────────────────── */
+        .section {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            padding: 32px;
+            margin-bottom: 24px;
+            scroll-margin-top: 24px;
+        }
+        .section-head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1.5px solid var(--surface);
+        }
+        .section-icon {
+            width: 42px; height: 42px;
+            border-radius: 11px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .icon-blue   { background: #EAE3DF; }
+        .icon-green  { background: #E1ECE5; }
+        .icon-red    { background: #FADBD8; }
+        .icon-amber  { background: #FCF3CF; }
+        .icon-purple { background: #EBDEF0; }
+        .icon-teal   { background: #E5E8E8; }
+        .icon-slate  { background: #EAEDED; }
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--ink);
+            letter-spacing: -.3px;
+        }
+        .section-num {
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 1px;
+        }
+        p { line-height: 1.75; margin-bottom: 14px; font-size: .97rem; }
+        p:last-child { margin-bottom: 0; }
+        ul, ol { padding-left: 20px; margin-bottom: 14px; }
+        li { line-height: 1.75; font-size: .97rem; margin-bottom: 4px; }
+        strong { font-weight: 600; color: var(--ink); }
+        code {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            background: var(--surface);
+            border-radius: 4px;
+            padding: 1px 6px;
+            font-size: .85em;
+            color: var(--accent);
+            border: 1px solid var(--border);
+        }
+        a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+        /* ── Callout boxes ──────────────────────────── */
+        .callout {
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 16px 0;
+            font-size: .93rem;
+            line-height: 1.65;
+        }
+        .callout-blue   { background: #F5EFEB; border-left: 3px solid var(--accent); color: #5C3D35; }
+        .callout-green  { background: #EAF2EC; border-left: 3px solid var(--green);  color: #2E4F39; }
+        .callout-red    { background: #FDF2F2; border-left: 3px solid var(--red);    color: #7B241C; }
+        .callout-amber  { background: #FEF9E7; border-left: 3px solid var(--amber);  color: #7E5109; }
+        /* ── Tables ─────────────────────────────────── */
+        .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 520px; }
+        thead tr { background: var(--surface); }
+        th {
+            text-align: left;
+            padding: 11px 14px;
+            font-weight: 600;
+            color: var(--ink);
+            font-size: .82rem;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            border-bottom: 1px solid var(--border);
+        }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--surface); vertical-align: top; line-height: 1.6; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: #FCFAF8; }
+        .tick { color: var(--green); font-weight: 700; }
+        .cross { color: var(--red); font-weight: 700; }
+        /* ── Pill list ──────────────────────────────── */
+        .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+        .pill {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: .82rem;
+            font-weight: 500;
+            color: var(--ink);
+        }
+        .pill-green { background: #D1FAE5; border-color: #6EE7B7; color: #065F46; }
+        .pill-red   { background: #FEE2E2; border-color: #FCA5A5; color: #991B1B; }
+        .pill-blue  { background: #DBEAFE; border-color: #93C5FD; color: #1D4ED8; }
+        /* ── Divider ────────────────────────────────── */
+        .divider { height: 1px; background: var(--surface); margin: 20px 0; }
+        /* ── Ad section special styling ─────────────── */
+        .ad-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .ad-type-card {
+            background: var(--surface);
+            border-radius: 10px;
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+        }
+        .ad-type-card strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: .9rem; }
+        .ad-type-card span { font-size: .83rem; color: var(--muted); line-height: 1.5; }
+        /* ── Footer ─────────────────────────────────── */
+        .footer {
+            background: var(--navy);
+            color: rgba(255,255,255,.65);
+            text-align: center;
+            padding: 28px 20px;
+            font-size: .85rem;
+            line-height: 1.8;
+        }
+        .footer a { color: rgba(255,255,255,.85); }
+        .footer strong { color: #fff; }
+        @media (max-width: 600px) {
+            .section { padding: 20px 18px; }
+            .site-header { padding: 40px 20px 36px; }
+        }
+    </style>
+</head>
+<body>
+<!-- ── Header ─────────────────────────────────────────────────── -->
+<header class="site-header">
+    <span class="header-icon">🏺</span>
+    <h1>AI Antique Identifier</h1>
+    <div class="doc-type">Privacy Policy</div>
+    <div class="badge-row">
+        <span class="badge">📅 Last Updated: June 25, 2026</span>
+        <span class="badge">📋 Effective: June 25, 2026</span>
+        <span class="badge">🌐 GDPR Compliant</span>
+        <span class="badge">🔒 Data Protection Compliant</span>
+    </div>
+</header>
+<div class="page-wrap">
+    <!-- ── TOC ──────────────────────────────────────────────────── -->
+    <div class="toc-strip">
+        <p>Quick Navigation</p>
+        <div class="toc-links">
+            <a href="#intro">Introduction</a>
+            <a href="#data-collection">Data Collection</a>
+            <a href="#camera-storage">Camera &amp; Gallery Data</a>
+            <a href="#third-party">Third-Party Services</a>
+            <a href="#data-retention">Data Retention</a>
+            <a href="#children">Children's Privacy</a>
+            <a href="#security">Security</a>
+            <a href="#user-rights">Your Rights</a>
+            <a href="#changes">Changes to Policy</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </div>
+    <!-- ── 1. Introduction ─────────────────────────────────────────── -->
+    <div class="section" id="intro">
+        <div class="section-head">
+            <div class="section-icon icon-blue">🛡️</div>
+            <div><h2>Introduction</h2><div class="section-num">Section 01</div></div>
+        </div>
+        <p><strong>LogicGridApps</strong>, operated by <strong>Mukesh Thummar</strong>, Gujarat, India ("we," "us," "our"), values your privacy. This Privacy Policy describes how we collect, use, process, and safeguard the information you provide when using our mobile application, <strong>AI Antique Identifier</strong> (the "App").</p>
+        <p>By downloading, installing, or using the App, you consent to the data collection and processing practices described in this policy. If you do not agree, please do not use the App.</p>
+    </div>
+    <!-- ── 2. Data Collection ───────────────────────────────────────── -->
+    <div class="section" id="data-collection">
+        <div class="section-head">
+            <div class="section-icon icon-green">📊</div>
+            <div><h2>Information We Collect</h2><div class="section-num">Section 02</div></div>
+        </div>
+        <p>We believe in data minimization. The App is designed to allow you to scan and identify antiques without creating an account or providing personal details.</p>
+        
+        <h3>1. Personal Data</h3>
+        <p class="tick">We do NOT collect any directly identifying personal details (such as your name, email address, physical address, phone number, or contact list).</p>
+        
+        <h3>2. Non-Personal &amp; Technical Data</h3>
+        <p>We collect certain technical data automatically to support app stability, performance, and ads monetization:</p>
+        <ul>
+            <li><strong>Device Information:</strong> Device model, OS version, language settings, screen density, network state, and CPU architecture.</li>
+            <li><strong>Application Diagnostics:</strong> Crash logs, performance metrics, load times, and error indicators.</li>
+            <li><strong>Mobile Advertising ID:</strong> The Google Advertising ID (AD_ID) for showing personalized advertisements via Google AdMob (subject to your device settings).</li>
+        </ul>
+    </div>
+    <!-- ── 3. Camera & Gallery Image Data ───────────────────────────── -->
+    <div class="section" id="camera-storage">
+        <div class="section-head">
+            <div class="section-icon icon-teal">📷</div>
+            <div><h2>Camera &amp; Gallery Data</h2><div class="section-num">Section 03</div></div>
+        </div>
+        <p>The core feature of the App is identifying vintage items from photographs. To do this, the App requests permission to access your device's Camera and/or local Storage.</p>
+        
+        <div class="callout callout-blue">
+            <strong>How We Process Images:</strong><br>
+            - When you take a photo using the camera or select one from your gallery, the image is cropped and resized locally on your device.<br>
+            - To identify the item, the image is analyzed using AI models and search algorithms. During search operations, images may be temporarily uploaded to a file hosting service (e.g. <code>https://tmpfiles.org</code>) so that visual indexing API calls can inspect them.<br>
+            - Images uploaded this way are temporary and subject to automated deletion. We do not store or keep images on our own servers, and we do not use your photos to build database profiles of you.
+        </div>
+    </div>
+    <!-- ── 4. Third-Party Services ─────────────────────────────────── -->
+    <div class="section" id="third-party">
+        <div class="section-head">
+            <div class="section-icon icon-amber">🔌</div>
+            <div><h2>Third-Party Services</h2><div class="section-num">Section 04</div></div>
+        </div>
+        <p>The App integrates third-party services that collect and process data in accordance with their respective privacy policies:</p>
+        
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Service</th><th>Purpose</th><th>Provider</th><th>Privacy Policy</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Google AdMob</strong></td>
+                        <td>Displays ads (interstitial, rewarded)</td>
+                        <td>Google LLC</td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Firebase Analytics</strong></td>
+                        <td>Measures user interactions and screens visited</td>
+                        <td>Google LLC</td>
+                        <td><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Firebase Crashlytics</strong></td>
+                        <td>Tracks and analyzes app crashes</td>
+                        <td>Google LLC</td>
+                        <td><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Meta / Facebook SDK</strong></td>
+                        <td>App attribution &amp; analytics</td>
+                        <td>Meta Platforms, Inc.</td>
+                        <td><a href="https://www.facebook.com/policy.php" target="_blank">Meta Privacy Policy</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- ── 5. Data Storage & Retention ──────────────────────────────── -->
+    <div class="section" id="data-retention">
+        <div class="section-head">
+            <div class="section-icon icon-purple">💾</div>
+            <div><h2>Data Storage &amp; Retention</h2><div class="section-num">Section 05</div></div>
+        </div>
+        <p>Your antique collections, custom category folders, and search history are saved <strong>locally</strong> on your device's internal SQLite database (via Room Database).</p>
+        <ul>
+            <li>No history or collection data is uploaded to our servers.</li>
+            <li>If you uninstall the App or clear the App's data in Android System Settings, all your saved collections, items, and scan history will be permanently deleted and cannot be recovered.</li>
+        </ul>
+    </div>
+    <!-- ── 6. Children's Privacy ────────────────────────────────────── -->
+    <div class="section" id="children">
+        <div class="section-head">
+            <div class="section-icon icon-red">👶</div>
+            <div><h2>Children's Privacy</h2><div class="section-num">Section 06</div></div>
+        </div>
+        <p>The App is not designed or directed to children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+        <p>If you are a parent or guardian and believe that your child has provided us with any data, please contact us at <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a>, and we will take necessary steps to ensure any data is cleared.</p>
+    </div>
+    <!-- ── 7. Security ──────────────────────────────────────────────── -->
+    <div class="section" id="security">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🔒</div>
+            <div><h2>Security</h2><div class="section-num">Section 07</div></div>
+        </div>
+        <p>We are committed to securing your information. Because all personal antique history is stored locally on your device, the security of this data depends on the security settings of your phone.</p>
+        <p>We recommend protecting your device with a secure PIN, pattern, or biometric lock to prevent unauthorized access to your collections and history.</p>
+    </div>
+    <!-- ── 8. Your Rights ───────────────────────────────────────────── -->
+    <div class="section" id="user-rights">
+        <div class="section-head">
+            <div class="section-icon icon-blue">📋</div>
+            <div><h2>Your Rights</h2><div class="section-num">Section 08</div></div>
+        </div>
+        <p>Depending on your location (e.g., GDPR, CCPA, or Indian Digital Personal Data Protection Act), you have rights regarding your data:</p>
+        <ul>
+            <li><strong>Right to Delete:</strong> You can wipe out all scanned items and collections at any time by deleting individual items in the App, resetting the App storage, or uninstalling the App.</li>
+            <li><strong>Right to Opt Out of Ads:</strong> You can disable interest-based ads by adjusting your Android Settings (Settings → Google → Ads → Reset/Delete advertising ID).</li>
+        </ul>
+    </div>
+    <!-- ── 9. Changes to Policy ─────────────────────────────────────── -->
+    <div class="section" id="changes">
+        <div class="section-head">
+            <div class="section-icon icon-green">🔄</div>
+            <div><h2>Changes to This Policy</h2><div class="section-num">Section 09</div></div>
+        </div>
+        <p>We may update this Privacy Policy from time to time. When changes are made, we will update the "Last Updated" date at the top of this document. We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.</p>
+    </div>
+    <!-- ── 10. Contact Us ───────────────────────────────────────────── -->
+    <div class="section" id="contact">
+        <div class="section-head">
+            <div class="section-icon icon-teal">✉️</div>
+            <div><h2>Contact Us</h2><div class="section-num">Section 10</div></div>
+        </div>
+        <p>If you have any questions, feedback, or concerns regarding this Privacy Policy, please reach out to us at:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a></li>
+            <li><strong>Developer:</strong> Mukesh Thummar</li>
+            <li><strong>Company:</strong> LogicGridApps</li>
+            <li><strong>Location:</strong> Gujarat, India</li>
+        </ul>
+    </div>
+</div>
+<footer class="footer">
+    <strong>AI Antique Identifier</strong><br>
+    © 2026 LogicGridApps · Mukesh Thummar · Gujarat, India<br>
+    <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a>
+</footer>
+</body>
+</html>
