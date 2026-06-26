@@ -23,50 +23,28 @@
             --white:  #FFFFFF;
             --card-shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(140,98,57,.08);
         }
+
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-        body {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 400;
-            color: var(--body);
-            background: #F4EFEA;
-            min-height: 100vh;
-        }
-        .site-header {
-            background: linear-gradient(135deg, #1C100E 0%, #4A3029 55%, #704E44 100%);
-            color: #fff;
-            padding: 56px 24px 48px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .site-header::before {
-            content: '';
-            position: absolute; inset: 0;
-            background: radial-gradient(ellipse at 30% 40%, rgba(140,98,57,.2) 0%, transparent 55%),
-                        radial-gradient(ellipse at 80% 70%, rgba(217,197,178,.15) 0%, transparent 55%);
-            pointer-events: none;
-        }
+
+        body { font-family: 'DM Sans', sans-serif; font-weight: 400; color: var(--body); background: #F4EFEA; min-height: 100vh; }
+
+        .site-header { background: linear-gradient(135deg, #1C100E 0%, #4A3029 55%, #704E44 100%); color: #fff; padding: 56px 24px 48px; text-align: center; position: relative; overflow: hidden; }
+        .site-header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 40%, rgba(140,98,57,.2) 0%, transparent 55%), radial-gradient(ellipse at 80% 70%, rgba(217,197,178,.15) 0%, transparent 55%); pointer-events: none; }
         .header-icon { font-size: 52px; display: block; margin-bottom: 16px; filter: drop-shadow(0 4px 12px rgba(0,0,0,.25)); }
-        .site-header h1 {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(1.8rem, 4vw, 2.6rem);
-            font-weight: 400;
-            letter-spacing: -.5px;
-            margin-bottom: 6px;
-        }
+        .site-header h1 { font-family: 'DM Serif Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 400; letter-spacing: -.5px; margin-bottom: 6px; }
         .site-header .doc-type { font-size: .9rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; opacity: .75; margin-bottom: 20px; }
         .badge-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
         .badge { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 4px 14px; font-size: .78rem; font-weight: 500; backdrop-filter: blur(4px); }
+
         .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
-        .toc-strip {
-            background: var(--white); border-radius: 14px; box-shadow: var(--card-shadow);
-            padding: 20px 24px; margin: -28px 0 32px; position: relative; z-index: 2;
-        }
+
+        .toc-strip { background: var(--white); border-radius: 14px; box-shadow: var(--card-shadow); padding: 20px 24px; margin: -28px 0 32px; position: relative; z-index: 2; }
         .toc-strip p { font-size: .78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
         .toc-links { display: flex; flex-wrap: wrap; gap: 6px; }
         .toc-links a { font-size: .82rem; color: var(--accent); text-decoration: none; background: var(--surface); border-radius: 6px; padding: 4px 10px; font-weight: 500; transition: background .15s, color .15s; }
         .toc-links a:hover { background: var(--accent); color: #fff; }
+
         .section { background: var(--white); border-radius: 16px; box-shadow: var(--card-shadow); padding: 32px; margin-bottom: 24px; scroll-margin-top: 24px; }
         .section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1.5px solid var(--surface); }
         .section-icon { width: 42px; height: 42px; border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
@@ -78,9 +56,11 @@
         .icon-teal   { background: #E5E8E8; }
         .icon-slate  { background: #EAEDED; }
         .icon-indigo { background: #EAE6E1; }
+
         h2 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; font-weight: 400; color: var(--ink); letter-spacing: -.3px; }
         h3 { color: var(--accent); margin: 18px 0 8px; font-size: 1rem; font-weight: 600; }
         .section-num { font-size: .72rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 1px; }
+
         p { line-height: 1.75; margin-bottom: 14px; font-size: .97rem; }
         p:last-child { margin-bottom: 0; }
         ul, ol { padding-left: 20px; margin-bottom: 14px; }
@@ -89,11 +69,13 @@
         code { font-family: 'SF Mono', 'Fira Code', monospace; background: var(--surface); border-radius: 4px; padding: 1px 6px; font-size: .85em; color: var(--accent); border: 1px solid var(--border); }
         a { color: var(--accent); text-decoration: none; font-weight: 500; }
         a:hover { text-decoration: underline; }
+
         .callout { border-radius: 10px; padding: 14px 18px; margin: 16px 0; font-size: .93rem; line-height: 1.65; }
         .callout-blue   { background: #F5EFEB; border-left: 3px solid var(--accent); color: #5C3D35; }
         .callout-green  { background: #EAF2EC; border-left: 3px solid var(--green);  color: #2E4F39; }
         .callout-red    { background: #FDF2F2; border-left: 3px solid var(--red);    color: #7B241C; }
         .callout-amber  { background: #FEF9E7; border-left: 3px solid var(--amber);  color: #7E5109; }
+
         .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
         table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 420px; }
         thead tr { background: var(--surface); }
@@ -101,21 +83,20 @@
         td { padding: 10px 14px; border-bottom: 1px solid var(--surface); vertical-align: top; line-height: 1.6; }
         tr:last-child td { border-bottom: none; }
         tr:hover td { background: #FCFAF8; }
+
         .divider { height: 1px; background: var(--surface); margin: 20px 0; }
-        .highlight-box {
-            background: linear-gradient(135deg, #F5EFEB, #EAF2EC);
-            border: 1px solid #D5C8C0;
-            border-radius: 12px;
-            padding: 20px 24px;
-            margin: 16px 0;
-        }
+
+        .highlight-box { background: linear-gradient(135deg, #F5EFEB, #EAF2EC); border: 1px solid #D5C8C0; border-radius: 12px; padding: 20px 24px; margin: 16px 0; }
         .highlight-box h3 { margin-top: 0; color: var(--navy); }
+
         .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
         .col-box { background: var(--surface); border-radius: 10px; padding: 16px; border: 1px solid var(--border); }
         .col-box h3 { color: var(--ink); margin-top: 0; font-size: .9rem; }
+
         .footer { background: var(--navy); color: rgba(255,255,255,.65); text-align: center; padding: 28px 20px; font-size: .85rem; line-height: 1.8; }
         .footer a { color: rgba(255,255,255,.85); }
         .footer strong { color: #fff; }
+
         @media (max-width: 600px) {
             .section { padding: 20px 18px; }
             .site-header { padding: 40px 20px 36px; }
@@ -124,19 +105,22 @@
     </style>
 </head>
 <body>
+
 <!-- ── Header ─────────────────────────────────────────────────── -->
 <header class="site-header">
     <span class="header-icon">🏺</span>
     <h1>AI Antique Identifier</h1>
     <div class="doc-type">Terms of Use</div>
     <div class="badge-row">
-        <span class="badge">📅 Last Updated: June 25, 2026</span>
+        <span class="badge">📅 Last Updated: June 26, 2026</span>
         <span class="badge">⚖️ Governed by Indian Law</span>
         <span class="badge">✅ Google Play Developer Policy Compliant</span>
-        <span class="badge">📱 AdMob Policy Compliant</span>
+        <span class="badge">📱 AdMob &amp; Meta Audience Network Compliant</span>
     </div>
 </header>
+
 <div class="page-wrap">
+
     <!-- ── TOC ──────────────────────────────────────────────────── -->
     <div class="toc-strip">
         <p>Quick Navigation</p>
@@ -145,10 +129,13 @@
             <a href="#license">License</a>
             <a href="#permitted">Permitted Use</a>
             <a href="#prohibited">Prohibited Use</a>
+            <a href="#data-accuracy">Data Accuracy</a>
+            <a href="#valuation-disclaimer">Price Disclaimer</a>
             <a href="#ads-terms">Advertising</a>
-            <a href="#permissions">Permissions</a>
+            <a href="#meta-terms">Meta / Facebook Ads</a>
+            <a href="#permissions">App Permissions</a>
             <a href="#ai-analysis">AI Identification</a>
-            <a href="#valuation-disclaimer">Valuation Disclaimer</a>
+            <a href="#app-limitations">App Limitations</a>
             <a href="#ip">Intellectual Property</a>
             <a href="#thirdparty-terms">Third-Party Services</a>
             <a href="#termination">Termination</a>
@@ -158,6 +145,7 @@
             <a href="#contact-terms">Contact</a>
         </div>
     </div>
+
     <!-- ── 1. Acceptance ─────────────────────────────────────────── -->
     <div class="section" id="acceptance">
         <div class="section-head">
@@ -174,6 +162,7 @@
         </div>
         <p>These Terms apply to all versions of the App, including all updates, upgrades, and new features released under the same App listing on the Google Play Store.</p>
     </div>
+
     <!-- ── 2. License ─────────────────────────────────────────────── -->
     <div class="section" id="license">
         <div class="section-head">
@@ -188,6 +177,7 @@
         <p>This license does not include any right to sublicense, sell, resell, transfer, assign, or otherwise make the App available to any third party.</p>
         <p>We reserve all rights in and to the App not expressly granted in these Terms.</p>
     </div>
+
     <!-- ── 3. Permitted Use ───────────────────────────────────────── -->
     <div class="section" id="permitted">
         <div class="section-head">
@@ -201,21 +191,22 @@
                 <ul>
                     <li>Take photos of vintage items, art, or antiques to identify them</li>
                     <li>Upload images from your device gallery for identification</li>
-                    <li>Learn details, origin, and historical eras of antiques</li>
+                    <li>Learn general details, origin, and historical eras of antiques</li>
                     <li>Save discovered antiques into personal collections</li>
                 </ul>
             </div>
             <div class="col-box">
                 <h3>Additional Features</h3>
                 <ul>
-                    <li>View estimated reference price ranges</li>
+                    <li>View <em>approximate</em> reference price ranges (not official appraisals)</li>
                     <li>Generate structured reports for identified objects</li>
-                    <li>Export and share antique details as text or PDFs</li>
+                    <li>Export and share antique details as text</li>
                     <li>Configure app interface localization in multiple languages</li>
                 </ul>
             </div>
         </div>
     </div>
+
     <!-- ── 4. Prohibited Use ──────────────────────────────────────── -->
     <div class="section" id="prohibited">
         <div class="section-head">
@@ -236,92 +227,203 @@
             <li>Use the App in violation of any applicable local, state, national, or international law or regulation</li>
             <li>Circumvent or interfere with the advertising system, including using ad blockers within the App, artificially clicking ads, or attempting to generate fraudulent ad impressions</li>
             <li>Impersonate LogicGridApps or any representative in communications or reviews</li>
+            <li>Use the estimated price or identification data in legal proceedings, insurance claims, tax filings, or any binding financial documents</li>
         </ul>
     </div>
-    <!-- ── 5. Advertising Terms ───────────────────────────────────── -->
+
+    <!-- ── 5. Data Accuracy Disclaimer ───────────────────────────── -->
+    <div class="section" id="data-accuracy">
+        <div class="section-head">
+            <div class="section-icon icon-amber">⚠️</div>
+            <div><h2>Data Accuracy &amp; Source Disclaimer</h2><div class="section-num">Section 05</div></div>
+        </div>
+        <div class="callout callout-amber">
+            <strong>Notice:</strong> Identification data, historical details, material descriptions, era information, and textual content displayed in the App are sourced from publicly available web resources (Google search, visual indexes, knowledge bases). This data is <strong>not verified, certified, or guaranteed</strong> to be accurate.
+        </div>
+        <p>By using the App, you acknowledge and accept that:</p>
+        <ul>
+            <li>The App may <strong>misidentify</strong> your item or display information about a similar but different object.</li>
+            <li>Identification is based on visual AI analysis only — the App cannot assess condition, weight, smell, texture, maker's marks, stamps, inscriptions, or provenance documentation.</li>
+            <li>Data sourced from the web may contain errors, outdated records, or conflicting historical information.</li>
+            <li>When confidence is low, the App may show a general error message or partial result. This is expected behavior, not a malfunction.</li>
+            <li>No warranty is made that the identification will match any specific item in the real world.</li>
+            <li>You use this information at your own risk and discretion.</li>
+        </ul>
+    </div>
+
+    <!-- ── 6. Antique Valuation Disclaimer ───────────────────────── -->
+    <div class="section" id="valuation-disclaimer">
+        <div class="section-head">
+            <div class="section-icon icon-red">💰</div>
+            <div><h2>Estimated Price &amp; Valuation Disclaimer</h2><div class="section-num">Section 06</div></div>
+        </div>
+        <div class="callout callout-red">
+            <strong>CRITICAL:</strong> AI Antique Identifier is <strong>NOT a licensed appraiser, professional historian, antique dealer, or certified valuation expert.</strong> All price ranges shown are <strong>approximate estimates only</strong>.
+        </div>
+        <p>All pricing information provided by the App:</p>
+        <ul>
+            <li>Is provided as a <strong>general reference only</strong>, derived from publicly available web data and AI inference — not from real-time auction results, dealer databases, or certified appraisal services.</li>
+            <li>Is <strong>approximate</strong>. The actual market value of your item may be <strong>significantly lower or significantly higher</strong> than the figure displayed.</li>
+            <li>Does <strong>not</strong> constitute an official, certified, legal, or binding valuation or appraisal.</li>
+            <li>Should <strong>not</strong> be relied upon for financial, tax, insurance, estate, buying, selling, or auction decisions.</li>
+            <li>May be incorrect, incomplete, outdated, or based on a different item than the one you scanned.</li>
+            <li>May fluctuate: antique market values are dynamic and the App does not reflect real-time market conditions.</li>
+        </ul>
+        <p><strong>Always consult a certified antique appraiser or subject-matter specialist before buying, selling, or auctioning valuable items.</strong> LogicGridApps and Mukesh Thummar are not responsible for any financial decisions or transactions made based on information presented in the App.</p>
+    </div>
+
+    <!-- ── 7. Advertising Terms ───────────────────────────────────── -->
     <div class="section" id="ads-terms">
         <div class="section-head">
             <div class="section-icon icon-amber">📢</div>
-            <div><h2>Advertising &amp; Monetization</h2><div class="section-num">Section 05</div></div>
+            <div><h2>Advertising &amp; Google AdMob</h2><div class="section-num">Section 07</div></div>
         </div>
         <p>The App is provided free of charge and is supported by advertising through <strong>Google AdMob</strong>. By using the App, you agree to the display of advertisements as described below.</p>
-        <h3>Ad Formats</h3>
+
+        <h3>Ad Formats Used</h3>
         <ul>
-            <li><strong>Interstitial ads:</strong> Full-screen ads displayed at natural app transition points (e.g., after scanning an item, opening detail screens, saving collections).</li>
-            <li><strong>Rewarded video ads:</strong> Ads you watch in exchange for unlocking detailed AI identification results, price range details, or other premium reports. These are optional but required if you wish to see certain advanced analysis details without a subscription.</li>
+            <li><strong>App Open Ads:</strong> Full-screen ads shown when the App is launched or resumed from the background.</li>
+            <li><strong>Interstitial Ads:</strong> Full-screen ads displayed at natural transition points (e.g., after scanning an item, navigating between screens).</li>
+            <li><strong>Rewarded Video Ads:</strong> Ads you voluntarily watch in exchange for unlocking full AI identification results and detailed reports. You must watch the complete video to earn the reward. If an ad fails to load, results may be provided at no cost.</li>
         </ul>
+
+        <h3>Google Advertising ID (AD_ID)</h3>
+        <p>Google AdMob requires use of the <strong>Google Advertising ID (GAID)</strong> to serve relevant ads. This permission (<code>com.google.android.gms.permission.AD_ID</code>) is declared in the App's manifest. The Advertising ID may be used to personalize ads delivered within the App. You can reset or delete this ID in your Android device settings at any time.</p>
+
         <h3>Your Obligations Regarding Ads</h3>
         <ul>
             <li>You agree not to use any ad-blocking software, extensions, or tools that prevent ads from being shown within the App</li>
             <li>You agree not to click on ads fraudulently, repeatedly, or in an automated manner</li>
             <li>You agree not to attempt to manipulate or interfere with the ad-serving infrastructure</li>
         </ul>
+
         <h3>AdMob Terms</h3>
         <p>Advertising served through Google AdMob is subject to Google's <a href="https://policies.google.com/technologies/ads" target="_blank">Advertising Policies</a> and <a href="https://support.google.com/admob/answer/48182" target="_blank">AdMob Publisher Policies</a>. Google may use cookies, advertising identifiers, and other technologies to serve relevant ads.</p>
-        <h3>Opting Out</h3>
-        <p>You can opt out of personalized advertising at any time via Android device settings: <strong>Settings → Google → Ads → Opt out of Ads Personalization</strong>. Non-personalized ads may still be shown.</p>
+
+        <h3>Opting Out of Personalized Ads</h3>
+        <p>You can opt out of personalized advertising at any time via Android device settings: <strong>Settings → Google → Ads → Opt out of Ads Personalization</strong> or <strong>Delete Advertising ID</strong>. Non-personalized ads may still be shown.</p>
     </div>
-    <!-- ── 6. App Permissions ──────────────────────────────────── -->
+
+    <!-- ── 8. Meta / Facebook Audience Network ─────────────────────── -->
+    <div class="section" id="meta-terms">
+        <div class="section-head">
+            <div class="section-icon icon-indigo">🔵</div>
+            <div><h2>Meta Audience Network (Facebook Ads Mediation)</h2><div class="section-num">Section 08</div></div>
+        </div>
+        <p>The App uses <strong>Meta Audience Network</strong> as an ad mediation partner integrated through the Google AdMob mediation framework. Meta may serve advertisements within the App in place of or alongside Google ads.</p>
+
+        <h3>What This Means for You</h3>
+        <ul>
+            <li>Meta Audience Network may collect your <strong>Mobile Advertising ID</strong>, device information, IP address, and app interaction signals to serve and measure ads.</li>
+            <li>If you have a Facebook or Instagram account on your device, Meta may link ad interactions to your account for attribution and measurement, subject to your Meta account privacy settings.</li>
+            <li>Meta's SDK is initialized at App launch. Even if no Meta ad is shown, the SDK may collect device-level data for fraud prevention and ad eligibility assessment.</li>
+        </ul>
+
+        <h3>Meta's Policies</h3>
+        <p>Your use of the App also constitutes acceptance of Meta's applicable data practices. Meta Audience Network is governed by:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/policy.php" target="_blank">Meta Privacy Policy</a></li>
+            <li><a href="https://www.facebook.com/ads/manage/audience_network/publisher_tos/" target="_blank">Meta Audience Network Terms of Service</a></li>
+            <li><a href="https://developers.facebook.com/terms" target="_blank">Meta Platform Terms</a></li>
+            <li><a href="https://developers.facebook.com/docs/audience-network/policy/" target="_blank">Meta Audience Network Policy</a></li>
+        </ul>
+
+        <h3>Opting Out of Meta Ads</h3>
+        <ul>
+            <li>Adjust Facebook ad preferences at: <a href="https://www.facebook.com/ads/preferences" target="_blank">facebook.com/ads/preferences</a></li>
+            <li>Use the Digital Advertising Alliance opt-out tool: <a href="https://optout.aboutads.info" target="_blank">optout.aboutads.info</a></li>
+            <li>Reset or delete your Android Advertising ID in: <strong>Settings → Google → Ads</strong></li>
+        </ul>
+    </div>
+
+    <!-- ── 9. App Permissions ──────────────────────────────────────── -->
     <div class="section" id="permissions">
         <div class="section-head">
-            <div class="section-icon icon-amber">🔐</div>
-            <div><h2>App Permissions</h2><div class="section-num">Section 06</div></div>
+            <div class="section-icon icon-purple">🔐</div>
+            <div><h2>App Permissions</h2><div class="section-num">Section 09</div></div>
         </div>
-        <p>The App requests standard permissions necessary for its core features. Before these permissions are requested, disclosures or runtime permission prompts will be shown:</p>
+        <p>The App requests the following standard Android permissions necessary for its core features. Runtime permission prompts will be shown before any sensitive permission is accessed:</p>
         <ul>
-            <li><code>CAMERA</code>: Essential for taking real-time photographs of antique objects inside the App to perform instant visual AI scans.</li>
-            <li><code>READ_EXTERNAL_STORAGE</code> / <code>READ_MEDIA_IMAGES</code>: Required to access your device gallery so you can select and upload existing photos of items for identification.</li>
-            <li><code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code>: Required to communicate with the online AI image analysis engine and retrieve details, and to load Google AdMob advertisements.</li>
+            <li><code>CAMERA</code>: Essential for taking real-time photographs of antique objects to perform instant visual AI scans.</li>
+            <li><code>READ_EXTERNAL_STORAGE</code> / <code>READ_MEDIA_IMAGES</code>: Required to access your device gallery so you can select and upload existing photos for identification.</li>
+            <li><code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code>: Required to communicate with the online AI image analysis engine and to load advertisements (Google AdMob and Meta Audience Network).</li>
+            <li><code>com.google.android.gms.permission.AD_ID</code>: Required by Google AdMob to read the Google Advertising ID for personalized ad delivery and fraud prevention. Also used by Meta Audience Network mediation.</li>
         </ul>
-        <p>You can revoke these permissions at any time through your Android System Settings, though doing so will disable the corresponding photo input or analysis features.</p>
+        <p>You can revoke camera and storage permissions at any time through your Android System Settings, though doing so will disable the corresponding photo input or analysis features.</p>
     </div>
-    <!-- ── 7. AI Identification Engine ───────────────────────────── -->
+
+    <!-- ── 10. AI Identification Engine ──────────────────────────── -->
     <div class="section" id="ai-analysis">
         <div class="section-head">
-            <div class="section-icon icon-purple">🤖</div>
-            <div><h2>AI Identification Engine</h2><div class="section-num">Section 07</div></div>
+            <div class="section-icon icon-teal">🤖</div>
+            <div><h2>AI Identification Engine</h2><div class="section-num">Section 10</div></div>
         </div>
-        <p>The App processes images using advanced Artificial Intelligence (AI) algorithms, neural network image recognition, and web resources to attempt to identify vintage items.</p>
+        <p>The App processes images using Artificial Intelligence (AI) algorithms, neural network image recognition, and public web resources to attempt to identify vintage items.</p>
         <ul>
             <li>Images you capture or select are processed to extract visual matches, features, text, or hallmarks.</li>
-            <li>To perform visual matches, images may be temporarily uploaded to an external hosting provider (e.g., <code>https://tmpfiles.org</code>) during the search process, in compliance with standard visual API workflows. These files are subject to temporary storage policies and are automatically deleted.</li>
-            <li>AI-generated answers, history, and details are for <strong>informational and educational purposes only</strong>. The models cannot guarantee 100% accuracy, authentications, or physical conditions of the items.</li>
+            <li>To perform visual matches, images may be temporarily uploaded to an external hosting provider (e.g., <code>https://tmpfiles.org</code>) during the search process. These files are subject to temporary storage policies and are automatically deleted.</li>
+            <li>AI-generated answers, history, and details are for <strong>informational and educational purposes only</strong>. The models cannot guarantee 100% accuracy, authentication, or assessment of physical condition.</li>
+            <li>The App has no ability to authenticate items. Only a qualified expert with physical access to an item can provide authenticated identification.</li>
         </ul>
     </div>
-    <!-- ── 8. Antique Valuation Disclaimer ────────────────────────────────── -->
-    <div class="section" id="valuation-disclaimer">
+
+    <!-- ── 11. App Limitations & Known Exceptions ─────────────────── -->
+    <div class="section" id="app-limitations">
         <div class="section-head">
-            <div class="section-icon icon-red">⚠️</div>
-            <div><h2>Valuation &amp; Appraisal Disclaimer</h2><div class="section-num">Section 08</div></div>
+            <div class="section-icon icon-slate">📌</div>
+            <div><h2>App Limitations &amp; Known Exceptions</h2><div class="section-num">Section 11</div></div>
         </div>
-        <div class="callout callout-red">
-            <strong>CRITICAL:</strong> AI Antique Identifier is <strong>NOT a licensed appraiser, professional historian, antique dealer, or certified valuation expert.</strong>
-        </div>
-        <p>All information provided in the App, including historical facts, estimated price ranges, item names, origins, and structured reports:</p>
+        <p>By using the App you acknowledge the following known limitations and exceptions:</p>
+
+        <h3>Identification Limitations</h3>
         <ul>
-            <li>Is provided as a <strong>reference guide only</strong> based on automatic AI analysis</li>
-            <li>Does <strong>not</strong> constitute an official, certified, legal, or binding valuation or appraisal</li>
-            <li>Should <strong>not</strong> be relied upon for financial, tax, buying, selling, or estate settlement decisions</li>
-            <li>May be incorrect, incomplete, outdated, or inaccurate</li>
+            <li><strong>Poor photo quality:</strong> Blurry, dark, or low-resolution photos may produce inaccurate or no results. Results quality is directly dependent on photo quality.</li>
+            <li><strong>Common or modern items:</strong> The App is optimized for antiques and vintage objects. Scanning modern, mass-produced, or generic items may produce incorrect or irrelevant results.</li>
+            <li><strong>Web screenshot inputs:</strong> Scanning a screenshot, digital image, or photo of a photo (rather than the physical object) may produce degraded or misleading results. The App is not designed or optimized for such inputs.</li>
+            <li><strong>Partial or obscured views:</strong> Items that are partially visible, damaged, heavily worn, or photographed at difficult angles may be incorrectly identified.</li>
+            <li><strong>Highly similar items:</strong> When many similar antiques exist (e.g., common porcelain patterns, mass-produced pottery), the App may display information for a related but distinct item.</li>
         </ul>
-        <p><strong>Always consult a certified antique appraiser or subject-matter specialist before buying, selling, or auctioning valuable items.</strong> LogicGridApps and Mukesh Thummar are not responsible for any financial decisions or transactions made based on information presented in the App.</p>
+
+        <h3>Connectivity &amp; Service Limitations</h3>
+        <ul>
+            <li>The App requires an active internet connection to perform identification. Offline identification is not supported.</li>
+            <li>Identification speed and accuracy depend on your network connection quality.</li>
+            <li>Third-party visual search services used by the App may be temporarily unavailable. In such cases, the App will display an error message. This is expected behavior and not an App defect.</li>
+            <li>Remote Config settings (ad behavior, feature flags) are fetched from Firebase. If your network is unavailable, the App will fall back to its default cached settings.</li>
+        </ul>
+
+        <h3>Ad &amp; Feature Availability Exceptions</h3>
+        <ul>
+            <li>Rewarded ads may not always be available in your region or at all times. If a rewarded ad fails to load, the App may grant access to results at no cost. This is a graceful fallback, not a guaranteed feature.</li>
+            <li>App Open Ads and Interstitial Ads may be disabled remotely by LogicGridApps via Firebase Remote Config at any time without notice.</li>
+            <li>Ad availability depends on Google AdMob and Meta Audience Network inventory, which is outside our control.</li>
+        </ul>
+
+        <h3>Data &amp; Storage Exceptions</h3>
+        <ul>
+            <li>Uninstalling the App, clearing App data, or performing a factory reset on your device will permanently erase all locally saved antique collections and history. This data cannot be recovered.</li>
+            <li>The App does not offer cloud backup for your collection data.</li>
+        </ul>
     </div>
-    <!-- ── 9. Intellectual Property ───────────────────────────────── -->
+
+    <!-- ── 12. Intellectual Property ──────────────────────────────── -->
     <div class="section" id="ip">
         <div class="section-head">
             <div class="section-icon icon-indigo">©️</div>
-            <div><h2>Intellectual Property</h2><div class="section-num">Section 09</div></div>
+            <div><h2>Intellectual Property</h2><div class="section-num">Section 12</div></div>
         </div>
         <p>All intellectual property rights in the App — including but not limited to source code, design, UI/UX layouts, custom animations, custom branding, the name "AI Antique Identifier," and associated logos — are the exclusive property of LogicGridApps and Mukesh Thummar.</p>
         <p>These Terms do not transfer any intellectual property rights to you. Your use of the App does not grant you any rights to the App's intellectual property beyond the limited personal license in Section 2.</p>
+
         <h3>Open-Source Components</h3>
         <p>The App incorporates open-source libraries and components (such as Jetpack Compose, Room, Hilt, UCrop, OkHttp, Coil, and others). These components remain subject to their respective open-source licenses, which are separate from these Terms.</p>
     </div>
-    <!-- ── 10. Third-Party Services ───────────────────────────────── -->
+
+    <!-- ── 13. Third-Party Services ───────────────────────────────── -->
     <div class="section" id="thirdparty-terms">
         <div class="section-head">
             <div class="section-icon icon-slate">🔗</div>
-            <div><h2>Third-Party Services</h2><div class="section-num">Section 10</div></div>
+            <div><h2>Third-Party Services</h2><div class="section-num">Section 13</div></div>
         </div>
         <p>The App integrates third-party services. Your use of these services through the App is also subject to their respective terms and policies:</p>
         <div class="table-wrap">
@@ -334,14 +436,14 @@
                         <td><a href="https://policies.google.com/terms" target="_blank">Google ToS</a> · <a href="https://support.google.com/admob/answer/48182" target="_blank">AdMob Policies</a></td>
                     </tr>
                     <tr>
-                        <td><strong>Firebase (Analytics, Remote Config)</strong></td>
-                        <td>Google LLC</td>
-                        <td><a href="https://firebase.google.com/terms" target="_blank">Firebase ToS</a></td>
+                        <td><strong>Meta Audience Network</strong></td>
+                        <td>Meta Platforms, Inc.</td>
+                        <td><a href="https://www.facebook.com/legal/terms" target="_blank">Meta ToS</a> · <a href="https://www.facebook.com/ads/manage/audience_network/publisher_tos/" target="_blank">Audience Network ToS</a> · <a href="https://developers.facebook.com/terms" target="_blank">Developer ToS</a></td>
                     </tr>
                     <tr>
-                        <td><strong>Facebook / Meta SDK</strong></td>
-                        <td>Meta Platforms, Inc.</td>
-                        <td><a href="https://www.facebook.com/legal/terms" target="_blank">Meta ToS</a> · <a href="https://developers.facebook.com/terms" target="_blank">Developer ToS</a></td>
+                        <td><strong>Firebase (Analytics, Crashlytics, Remote Config)</strong></td>
+                        <td>Google LLC</td>
+                        <td><a href="https://firebase.google.com/terms" target="_blank">Firebase ToS</a></td>
                     </tr>
                     <tr>
                         <td><strong>UCrop Library</strong></td>
@@ -353,16 +455,22 @@
                         <td>Google LLC</td>
                         <td><a href="https://policies.google.com/terms" target="_blank">Google ToS</a></td>
                     </tr>
+                    <tr>
+                        <td><strong>tmpfiles.org (or similar)</strong></td>
+                        <td>Third-party hosting</td>
+                        <td>Subject to provider's own terms</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
         <p>LogicGridApps is not responsible for the availability, accuracy, content, practices, or policies of any third-party service. Outages or changes to third-party APIs are beyond our control.</p>
     </div>
-    <!-- ── 11. Termination ────────────────────────────────────────── -->
+
+    <!-- ── 14. Termination ────────────────────────────────────────── -->
     <div class="section" id="termination">
         <div class="section-head">
             <div class="section-icon icon-red">🔚</div>
-            <div><h2>Termination</h2><div class="section-num">Section 11</div></div>
+            <div><h2>Termination</h2><div class="section-num">Section 14</div></div>
         </div>
         <p>These Terms are effective until terminated.</p>
         <h3>Termination by You</h3>
@@ -374,71 +482,82 @@
             <li>We are required to do so by law or Google Play Store policy</li>
             <li>We decide to discontinue the App</li>
         </ul>
-        <p>Upon termination, the license granted in Section 2 automatically revokes. Sections 8, 9, 12, 13, and 14 survive termination.</p>
+        <p>Upon termination, the license granted in Section 2 automatically revokes. Sections 5, 6, 12, 15, and 16 survive termination.</p>
     </div>
-    <!-- ── 12. Limitation of Liability ───────────────────────────── -->
+
+    <!-- ── 15. Limitation of Liability ───────────────────────────── -->
     <div class="section" id="liability">
         <div class="section-head">
             <div class="section-icon icon-amber">⚖️</div>
-            <div><h2>Disclaimer of Warranties &amp; Limitation of Liability</h2><div class="section-num">Section 12</div></div>
+            <div><h2>Disclaimer of Warranties &amp; Limitation of Liability</h2><div class="section-num">Section 15</div></div>
         </div>
         <h3>Disclaimer of Warranties</h3>
         <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, LOGICGRIDAPPS EXPRESSLY DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND NON-INFRINGEMENT.</p>
         <p>We do not warrant that:</p>
         <ul>
             <li>The App will be available, uninterrupted, or error-free</li>
-            <li>AI identification or estimated valuations will be 100% accurate or complete</li>
+            <li>AI identification results or estimated valuations will be accurate, complete, or match your specific item</li>
+            <li>Price estimates will reflect actual market, auction, insurance, or resale value</li>
             <li>The App will be free of viruses or other harmful components</li>
-            <li>Third-party services (AdMob, Firebase, Meta SDK) will be continuously available</li>
+            <li>Third-party services (AdMob, Firebase, Meta Audience Network) will be continuously available</li>
+            <li>Rewarded ads will always be available to load in your region</li>
         </ul>
+
         <h3>Limitation of Liability</h3>
         <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, LOGICGRIDAPPS AND ITS OPERATORS SHALL NOT BE LIABLE FOR:</p>
         <ul>
             <li>Any indirect, incidental, special, consequential, exemplary, or punitive damages</li>
             <li>Loss of profits, data, goodwill, or business opportunities</li>
-            <li>Financial losses arising from purchase or sale of items based on estimated values or information in the App</li>
-            <li>Damages arising from third-party service failures, outages, or policy changes</li>
+            <li>Financial losses arising from purchase, sale, auction, or insurance decisions made based on estimated values or information in the App</li>
+            <li>Damages arising from incorrect antique identification or misidentification</li>
+            <li>Damages arising from third-party service failures, outages, or policy changes (including Google AdMob, Meta Audience Network, or Firebase)</li>
             <li>Unauthorized access to your device or local App data</li>
+            <li>Loss of locally stored antique collection data due to App uninstallation, device reset, or App data clearing</li>
             <li>Any damages exceeding INR 500 (five hundred rupees), to the extent permitted by law</li>
         </ul>
     </div>
-    <!-- ── 13. Indemnification ─────────────────────────────────────── -->
+
+    <!-- ── 16. Indemnification ─────────────────────────────────────── -->
     <div class="section">
         <div class="section-head">
             <div class="section-icon icon-slate">🛡️</div>
-            <div><h2>Indemnification</h2><div class="section-num">Section 13</div></div>
+            <div><h2>Indemnification</h2><div class="section-num">Section 16</div></div>
         </div>
         <p>You agree to indemnify, defend, and hold harmless LogicGridApps, Mukesh Thummar, and their respective affiliates, from and against any claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or in connection with:</p>
         <ul>
             <li>Your use or misuse of the App</li>
             <li>Your violation of these Terms</li>
             <li>Your violation of any applicable law or third-party rights</li>
+            <li>Any financial or commercial decisions you make based on information from the App</li>
         </ul>
     </div>
-    <!-- ── 14. Governing Law ───────────────────────────────────────── -->
+
+    <!-- ── 17. Governing Law ───────────────────────────────────────── -->
     <div class="section" id="governing">
         <div class="section-head">
             <div class="section-icon icon-blue">🏛️</div>
-            <div><h2>Governing Law &amp; Dispute Resolution</h2><div class="section-num">Section 14</div></div>
+            <div><h2>Governing Law &amp; Dispute Resolution</h2><div class="section-num">Section 17</div></div>
         </div>
         <p>These Terms shall be governed by and construed in accordance with the laws of the <strong>Republic of India</strong>, without regard to its conflict of law provisions.</p>
         <p>Any dispute, claim, or controversy arising out of or relating to these Terms or the use of the App shall be subject to the exclusive jurisdiction of the competent courts located in <strong>Gujarat, India</strong>.</p>
         <p>Before initiating formal legal proceedings, you agree to first contact us at <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a> and attempt to resolve the dispute informally within 30 days.</p>
     </div>
-    <!-- ── 15. Changes to Terms ───────────────────────────────────── -->
+
+    <!-- ── 18. Changes to Terms ───────────────────────────────────── -->
     <div class="section" id="changes-terms">
         <div class="section-head">
             <div class="section-icon icon-teal">🔄</div>
-            <div><h2>Changes to These Terms</h2><div class="section-num">Section 16</div></div>
+            <div><h2>Changes to These Terms</h2><div class="section-num">Section 18</div></div>
         </div>
         <p>We may revise these Terms at any time. When we make material changes, we will update the "Last Updated" date at the top of this page. For significant changes, we may provide an in-app notification.</p>
         <p><strong>Your continued use of the App after the revised Terms become effective constitutes your acceptance of the changes.</strong> If you do not agree to the revised Terms, you must stop using the App and uninstall it.</p>
     </div>
-    <!-- ── 16. Contact ────────────────────────────────────────────── -->
+
+    <!-- ── 19. Contact ────────────────────────────────────────────── -->
     <div class="section" id="contact-terms">
         <div class="section-head">
             <div class="section-icon icon-blue">✉️</div>
-            <div><h2>Contact</h2><div class="section-num">Section 17</div></div>
+            <div><h2>Contact</h2><div class="section-num">Section 19</div></div>
         </div>
         <p>For questions about these Terms, to report a concern, or to seek legal clarification:</p>
         <ul>
@@ -451,11 +570,14 @@
             By using the App, you acknowledge that you have read these Terms of Use and the Privacy Policy, and agree to be bound by both documents.
         </div>
     </div>
+
 </div>
+
 <footer class="footer">
     <strong>AI Antique Identifier</strong><br>
     © 2026 LogicGridApps · Mukesh Thummar · Gujarat, India<br>
     <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a>
 </footer>
+
 </body>
 </html>
